@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #333;
+        }
+        
+        .wraper{
+            max-width: 760px;
+            margin: 10px auto;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .Days-Week{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+        }
+
+        .Number-Days{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .Days-Week span{
+            color: black;
+        }
+
+        .Number-Days span{
+            display: inline-block;
+            width: 14.2%;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .mês-anterior{
+            opacity: 0.5;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wraper">
+
+        <div class="Days-Week">
+            <span>Segunda</span>
+            <span>Terça</span>
+            <span>Quarta</span>
+            <span>Quinta</span>
+            <span>Sexta</span>
+            <span>Sabado</span>
+            <span>Domingo</span>
+        </div>
+
+        <div class="Number-Days">
+            <span class="mês-anterior">30</span>
+            <span class="mês-anterior">31</span>
+        </div>
+
+    </div><!--WRAPER-->
+    <script>
+        let el = document.querySelector(".Number-Days");
+        for(i = 1; i < 31; i++){
+            el.innerHTML+='<span>' +i+'</span>';
+
+        }
+    </script>
+
+</body>
+</html>
